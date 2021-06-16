@@ -19,6 +19,7 @@ example: 13
 ==>     8+4+1 = 13
 
 
+
 ## Values
 
 A typcial modern computer has more than 30 billion bits in its volatile **data storage** or working memory.
@@ -34,11 +35,15 @@ Value types include: numbers, strings and functions.
 Every value has to be stored somewhere. If you want to use a gigantic amount of value types at the same time, you might run out of memory. 
 ^^ This is only a problem if you need that all simultaneously.
 
+<br></br>
+
 ### Numbers
 
 JavaScript uses a fixed number of bits - 64 
 These bits are used to store a single number value. These bits also store negative numbers so one bit indicated the sign of the number.
 Some bits are also used to stope the position of the decimal point. 
+
+<br></br>
 
 ### Arithmetic
 
@@ -57,6 +62,8 @@ example: X % Y is the remainder of dividing X by Y
 
  314 % 100 ==> 14
  144 % 12 ==> 0
+ 
+<br></br>
 
 ### Special Numbers
 
@@ -64,6 +71,7 @@ Infinity    (Infinity - 1 = Infinity)
 -Infinity    
 NaN    *is a value of the number type  (0/0 = NaN) (Infinify - Infinity = NaN)
 
+<br></br>
 
 ## Strings
 
@@ -79,6 +87,7 @@ When an N character occurs after a backslash, it is interpreted as a newline.
 When a T is after a backslash, it means a tab character
 
 example:
+```
 "This is the first line\nAnd this is the second"
 
 ==> This is the first line
@@ -88,7 +97,7 @@ example:
 "A newline character is written like \"\\n\"."
 
 ==>   "A newline character is written like \"\\n\"."
-
+```
 Strings are modeled as a series of bits to be able to exist inside a computer.
 
 Some characters such as many emoji take up two "character postions"
@@ -96,7 +105,7 @@ Some characters such as many emoji take up two "character postions"
 Strings can be combined using _concatenation_ glueing two strings together
 
 example:
-"con" + "cat" + "e" + "nate" ==> "concatenate"
+> "con" + "cat" + "e" + "nate" ==> "concatenate"
 
 String valued have _methods_ that can be used to perform other operations on them. 
 
@@ -104,7 +113,9 @@ _temperate literals_ can combine other info together and embed other values
 
 something inside `${}` results in a converted string with the included info within that position.
 
-##Unary Operators
+<br></br>
+
+## Unary Operators
 
 Operators can be symbols and some are written as words.
 such as the operator:  typeof 
@@ -112,5 +123,5 @@ such as the operator:  typeof
 example: console.log(typeof 4.5)
 // → number
 
-operators that use two valued are called ** binary operators** while those that take one are called **urnary operators**
+operators that use two valued are called **binary operators** while those that take one are called **urnary operators**
 
