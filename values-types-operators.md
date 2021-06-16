@@ -1,7 +1,16 @@
-**static is not generated on the database - hosetd on server input files are prebuilt and the source code isnt changed
-- html, css, js - not dynamiclly generated infor can change in js but not on serveer
-**dynamic generated on the server every new req would generate a new updated info which adjusts the html on the server
-- info generated though node and the server returns.a dynamically generated page - can have js that is also being changed
+##Summary 
+
+- number values
+- string values
+- boolean values
+- undefined values
+- Arthmetic operators (binary) 
+- string concatenation
+- comparison (==, !=, ===, !==, < > <= >=)
+- logic (|| &&)
+- urnary operators (typeof  -  !)
+- ternary operator (conditional operator) 
+
 
 
 # Values Types and Operators Notes
@@ -124,4 +133,124 @@ example: console.log(typeof 4.5)
 // → number
 
 operators that use two valued are called **binary operators** while those that take one are called **urnary operators**
+
+<br></br>
+
+## Boolean Values
+JavaScript has a _Boolean_ type which is either true or false. 
+
+You can create Boolean types by **Comparison**
+
+example:
+```
+console.log(3 > 2)
+// → true
+console.log(3 < 2)
+// → false
+```
+
+The signs > greater than or < less than are ***Binary Operators***
+
+These operators result in a boolean value.
+
+You can use Booleans on Strings. The way strings are ordered is typically:
+- Uppercase letters are always less than lowercase 
+Ex: "Z" < "a" ==> true
+
+- When comparing JS strings, JS goes over the characters from left to right, comparing the Unicode codes one by one. 
+
+***There is only one value in JS that is not equal to itself: NaN***
+
+```
+console.log(NaN == NaN)
+==> false
+```
+
+- NaN is describing a nonsensical computation and as such is not equal to the result of another nonsensical computation
+
+<br></br>
+
+##Logical Operators
+
+JavaScript supports three logical operators: _and, or_ and _not_
+
+&& - logical operator and. It's result is only true if both values given are true
+
+|| - logical operator or. Produces true if either of the values given to it is true 
+
+_Not_ (!) - is a urnary operator that flips the value given to it. 
+```
+console.log(!true) ==> false
+console.log(!false) ==> true
+```
+
+Ternary - logical operator that operates on three values. Can also be called a _Conditional Operator_
+
+```
+console.log(true ? 1 : 2) ==> 1
+console.log(false ? 1 : 2) ==> 2
+```
+
+<br></br>
+
+## Empty Values
+
+There are two values that are used to denote the absence of a menaningful value: 
+ - null
+ - undefined
+
+They are themselves values but they carry no information.
+
+<br></br>
+
+## Automatic type conversion
+
+type coercion - when an opperator is applied to the wrong type of value, JS will convert that value to the type it needs. 
+
+When something that doesn't map to a number in an obvious way is converted to a number, you get the value NaN
+
+
+When Null or Undefined occurs on either side of the operator, it produces true only if both sides are one of null or undefined. 
+
+```
+console.log(null == undefined) ==> true
+console.log(null == 0) ==> false
+```
+
+When you want to test whether a value has a **real value** instead of nul or undefined you can **compare it to null** with the == or != operator.
+
+```
+console.log(0 == false) ==> true
+console.log('' == false) ==> true
+```
+
+<br></br>
+
+##Short-circuting of logical operators
+
+|| - logical operator or, **will return the value to it's left when that can be converted to true** otherwise it will return the value on the right.
+
+```
+console.log( null || "user") ==> "user"
+console.log( "Agnes" || "user") ==> "Agnes"
+```
+
+**0, NaN and "" - all count as false** All other values count as true. 
+
+
+With these logical operators: 
+ - in the case of (true || X)
+  - the result will be true and X will never be evaluated. 
+
+|| - logical operator or, **will return the value to it's left when that can be converted to true** otherwise it will return the value on the right.
+
+
+
+- in the case of (false && X)
+  - the result will be false and X will never be evaluated 
+
+&& - logical operator and **will return the value to it's left when that value converts to false** otherwise it returns whats on the right. 
+
+
+<br></br>
 
