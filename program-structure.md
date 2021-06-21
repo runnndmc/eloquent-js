@@ -30,15 +30,19 @@ ex:
 After a binding has been defined its name can be used as an expression whos value is whatever value the binding currently holds. 
 
 ex: 
+```
 let ten = 10
 console.log(ten * ten) ==> 100
+```
 
 The = operator on existing bindings disconnects them from their current value and points them to a new value. 
 
 ex:
+```
 let mood = "light"
 mood = "dark" 
 console.log(mood) ==> "dark"
+```
 
 Two bindings can refer to the same value. 
 
