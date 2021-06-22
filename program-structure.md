@@ -1,4 +1,4 @@
-### Program Structure
+# Program Structure
 
 ## Expressions and Statements
 
@@ -114,4 +114,27 @@ function expression
 ```
 
 ## Console.log
+
+console.log is not considered a _simple binding_
+
+instead, console.log is actually an experssion that retrieves the _log_ *property* from the *value* held by the _console_ *binding*.
+
+## Return Values
+
+A _side effect_ is showing a dialog box or writing text to a screen. 
+
+Functions may produce side effets or values. 
+
+In JS anything that produces a value is an _expression_ 
+(_reminder: An **expression** is a fragment of code that produces a value which is written literally.)
+
+This means that function calls can be used within larger expressions. 
+
+ex:
+> console.log(Math.max(2, 10) + 100) ==> 110 
+
+^^ this function call is being used as a part of an addition expression 
+
+## Control Flow
+
 
