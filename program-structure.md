@@ -137,4 +137,39 @@ ex:
 
 ## Control Flow
 
+When your program has more than one statement, the statements are executed from top to bottom. 
+
+ex:
+```
+let setNumber = Number(prompt("Pick a number"))
+console.log("You're number is the square root of" + setNumber * setNumber)
+```
+
+Here, the _function_ Number transforms it's given value to a number form.
+Similar functions in JS are: String or Boolean 
+
+**Straight line control-flow** is when a program executes statements from top to bottom with no break. 
+
+When a program takes the proper branch based on the situation at hand, it is called a **conditional execution**
+
+Conditional executions are created using _if_ statements. 
+If statements executes or skips a statement depending on the value of the boolean expression.
+
+ex:
+```
+let setNumber = Number(prompt("Pick a number"))
+
+if(!Number.isNaN(setNumber)){
+  console.log("You're number is the square root of" + setNumber * setNumber)
+}
+```
+The function **Number.isNaN** returns true only if the argument given is not a number. 
+Therefore, the condition states, "unless the Number is Not a Number, do this"
+
+Braces are used to connect and number of statements into a single statement - these are called **blocks**
+
+You can use the _else_ keyword to create two alternate execution paths. 
+
+Chaining together multiple if/else statements gives you more than two paths to choose from. 
+
 
