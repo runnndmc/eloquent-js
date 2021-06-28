@@ -170,6 +170,110 @@ Braces are used to connect and number of statements into a single statement - th
 
 You can use the _else_ keyword to create two alternate execution paths. 
 
-Chaining together multiple if/else statements gives you more than two paths to choose from. 
+**Chaining** together multiple if/else statements gives you more than two paths to choose from. 
+
+
+### While and Do loops
+
+The form of control flow that runs a piecee of code multiple times is called a **loop**
+
+Looping flow control allows us to go back to some point in a program and repeat it with the current program state.
+
+ex:
+```
+let num = 0; 
+while (num <= 12){
+ console.log(num)
+ num = num +2
+}
+
+==> 0
+==> 2
+==> ... etc.
+```
+
+The loop keeps entering the statement as long as the boolean expression produces a value which returns _true_.
+
+In the example above, you can see how the binding : number  keeps track of theprogress of a program. 
+
+In the next example, we're looking to write a program that calculates and shows the value of 2 to the 10th power. In this example, theree needs to be two bindings, one to keep track of the result and one to count how often we've multiplied. The loop tests whether we've reached 10 yet. 
+
+```
+let total = 1
+let mult = 0
+
+while ( mult < 10 ) {
+  total = total * 2
+  mult ++
+}
+==>1024
+```
+
+It is a good idea to start a counter at 0.
+
+**Do Loop**
+
+A do loop is similar to a while loop. 
+This loop always executes it's body at least once. It starts texting whether it should stop only after the first execution.
+
+ex:
+```
+let yourName;
+do {
+ yourName = prompt("Who are you?");
+} while (!yourName);
+
+console.log(yourName)
+```
+
+This will ask a user of their name continuously until it gets something that is not an empty string. 
+
+All strings except "" convert to _true_
+
+**For Loops**
+
+similar to all other loops except, a for loop has all of the statements that are related to the state of the loop are grouped together and included in the statement after _for_
+
+ex:
+```
+for ( let i=0; i < 10; i = i + 2) {
+ console.log(i)
+}
+
+==> 0
+==> 2
+==> ... etc
+```
+
+Breaking down a for loop: 
+
+i=0; <-- _initializer_ (usually defining a binding)
+i<10; <-- _expression_ (to check if the loop should continue)
+i = i + 2 <-- _updates the state_ (after every iteration)
+
+ 
+**Breaking Out of a Loop**
+
+There is a special statement **break** that will take you out of a loop immediately once read.
+
+
+ex:
+```
+for (let current = 20; current = current + 2){
+ if ( current % 7 === 0 ){
+   console.log(current);
+   break;
+ }
+}
+```
+
+The example above doesn't have an expression that would check for the end of the loop, therefore, the loop will never stop unless the _break_ statement inside of the if statement is executed. 
+
+The _continue_ keyword is similar to break keyword accept it influences the loop to progress.
+
+When continue is encountered by a loop body, the control flow jumps ut of the body and continues with the loops next iteration. 
+
+***Updating Bindings Succnctly***
+
 
 
