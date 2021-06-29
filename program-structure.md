@@ -12,6 +12,8 @@ A **statement** is a list of program instructions to be executed by the computer
 
 A statement that changes internal state of the machine in a way that will affect the statements that come after it is called a **side effect**
 
+
+
 ## Bindings
 
 A **binding** (or _variable_) allows the computer to catch and hold values to keep internal state and remember the values. 
@@ -80,6 +82,7 @@ ex:
 Check for reserved workds if the binding comes back with a syntax error.
 
 
+
 ## Environment
 
 A collection of bindings and their values that exist at a given time is called an **environment**
@@ -90,6 +93,9 @@ Bindings provide a way to interact with the surrounding system
 
 ex: 
 > In a browser, there are functions to interact with the currently loaded website to observe key or mouse inputs. 
+
+
+
 
 ## Functions
 
@@ -113,11 +119,15 @@ function expression
 
 ```
 
+
+
 ## Console.log
 
-console.log is not considered a _simple binding_
+console.log is not a simple binding
 
-instead, console.log is actually an experssion that retrieves the _log_ *property* from the *value* held by the _console_ *binding*.
+instead, console.log is actually an *expession* that retrieves the _log_ *property* from the *value* held by the _console_ *binding*.
+
+
 
 ## Return Values
 
@@ -134,6 +144,8 @@ ex:
 > console.log(Math.max(2, 10) + 100) ==> 110 
 
 ^^ this function call is being used as a part of an addition expression 
+
+
 
 ## Control Flow
 
@@ -171,6 +183,8 @@ Braces are used to connect and number of statements into a single statement - th
 You can use the _else_ keyword to create two alternate execution paths. 
 
 **Chaining** together multiple if/else statements gives you more than two paths to choose from. 
+
+
 
 
 ### While and Do loops
@@ -273,7 +287,77 @@ The _continue_ keyword is similar to break keyword accept it influences the loop
 
 When continue is encountered by a loop body, the control flow jumps ut of the body and continues with the loops next iteration. 
 
-***Updating Bindings Succnctly***
 
 
+***Updating Bindings Succinctly***
+
+Programs often need to update bindings value based on that bindings previous value.
+
+shortcuts for succinctly updating a binding:
+* ++
+* +=
+* --
+* -=
+* *=
+
+Using *( *= 2 )* would double the bindings value succinctly
+
+
+## Dispatching on a Value with Switch
+
+When you have a statement with if/ else if/ else if/ else 
+
+There is a way to dispatch the statement in a more direct way. This construct is called a *switch*
+Switch is inherited from the C/Java languages
+
+ex:
+```
+switch(prompt("what is the weather like today?")){
+ case "rainy": 
+   console.log("bring an umbrella");
+   break;
+ case "sunny":
+   console.log("wear sun screen!");
+ case "cloudy":
+   console.log("dress lightly");
+ break;
+ default:
+   console.log("who knows?! call mom.")
+ break;
+}
+```
+
+You can put a number of case labels inside the block opened by switch.
+
+The program starts executing at the label the corresponds to the value switch was given. 
+If no matching value is found, it will execute at the label default. 
+
+It will execute all labels until it hits a break statement.
+
+In some cases, you can share code between cases by not including a break between them (like in the example above)
+
+
+## Capitalization
+
+In JS you can define a binding in a few different ways:
+* alltogetherlikethis
+* with_breaks_in_between
+* EveryWordCapsFirstLetter
+* everythingButTheFirstLetterCaps
+
+
+In a few cases such as the Number function the word is capitalized so as to mark it as a *constructor*
+
+
+
+## Sum It Up!
+
+* A program is made up of statements.
+* Statements can contain more statements.
+* Statements contain expressions which can be built out of smaller expressions
+* You can introduce disturbance in control flow by adding conditional statements or looping statements
+* Bindings are used to store data under a name - they can track the state in your program
+* The environment is the set of bindings that are defined
+* Functions are special values that encapsulate a piece of a program
+* A function call is an expression d may produce a value
 
