@@ -73,13 +73,13 @@ ex:
 **Binding Names**
 
 <ul>
- <li>Can be any word exceot for reserved JS words</li>
+ <li>Can be any word except for reserved JS words</li>
  <li>Can not start with a number</li>
  <li>Can only have special characters $ or _ but none other</li>
  <li>Keywords can not be used as binding names</li>
 </ul>
 
-Check for reserved workds if the binding comes back with a syntax error.
+Check if you're using a reserved word if the binding comes back with a syntax error.
 
 
 
