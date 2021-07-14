@@ -21,7 +21,6 @@ Functions can have a set of **parameters** or arguments
 and a _body_ which contain statements that are to be executed when the function is called.
 
 > (_a statement is a list of program instructions to be executed by the computer._)
-
 ```
 ex: 
 function definition       parameters
@@ -40,7 +39,7 @@ This function does not create a value, it only returns a _side effect_
 A return statement determines what value the function returns. 
 If you have a return keyword with no value after it the function will return *undefined*
 
-*Parameters* to a functiom act as regular bindings except their initial values are given by the caller of the function. 
+*Parameters* to a function act as regular bindings except their initial values are given by the caller of the function. 
 
 ## Bindings and Scope 
 
@@ -92,8 +91,8 @@ const half = function(n){
  
  let n = 20; --- globally scoped 
  
- console.log(half(10)) ==> 5; --- local scope
- console.log(n) ==> 20; --- global scope 
+ console.log(half(10)) ==> 5; --- local scope value
+ console.log(n) ==> 20; --- global scope value
  ```
  
  ## Nested Scope
@@ -133,11 +132,13 @@ Local scope can also see all of the local scopes that contain it and all of thes
 
 ## Functions as Values
 
-A function value can do all of the same things as other values can. You can use it as an arbitrary expression in addition to using it to call a function. 
+A function value can do all of the same things as other values can. 
+You can use it as an arbitrary expression in addition to using it to call a function. 
 
-For example- you could store a function in a new binding
-             Pass that new binding as an argument to a function 
-             and utilize that function in another. 
+For example- you could:
+  - store a function in a new binding
+  - Pass that new binding as an argument to a function 
+  - and utilize that function in another. 
               
 Similarly, a binding that holds a function that is not constant can be reassigned a new value.
 
@@ -160,7 +161,7 @@ if(safeMode){
 A shorter way to create a function binding is to use the keyword _function_ at the start of the statement. 
 
 ```
-ex:
+ex: function declaration
 
 function square(n){
   return n * n
@@ -186,10 +187,10 @@ function action(){
 
 ## Arrow functions
 
-Another notaion for functions besides declarations and definitions are **Arrow functions**
+Another notaion for functions besides declarations and definitions are **arrow functions**
 
 ```
-ex:
+ex: arrow function
 
 const power = (base, exponent) => {
   let result = 1;
@@ -212,13 +213,13 @@ Both function expressions and arrow functions do essentially the same things and
 The call stack defines how control flows through a function.
 
 ```
-simple ex:
+simple ex: control flow
 
-function greet(who){
-  console.log("Hello"+ who);
+function greet(who){          1  3
+  console.log("Hello"+ who);  2
 }
-greet("Harry")
-console.log("bye!")
+greet("Harry")                4
+console.log("bye!")           5
 
 ```
 Control flows through this program like so:
@@ -226,19 +227,19 @@ Control flows through this program like so:
     - call to greet lets control start at the beginning of that function
     - the greet function calls the console.log which takes control and does it's job 
     - control returns to the function greet line where it reaches the end of the greet function
-    - Then it returns control to the line in which it was 
+    - Then it returns control to the line in which it was called
     - After that it continues to the console.log and once that returns the program reaches its end
     
- Because control has to jump back to where the function was called after the function is complete, the computer must remember the context from which the call happened. 
+Because control has to jump back to where the function was called after the function is complete, the computer must remember the context from which the call happened. 
  
  In the above example theres 
     Case 1: console.log returns to the greet function once complete
     Case 2: console.log returns to the end of the program
     
-The place where the computer stpres this context is called a _call back_
+The place where the computer stores this context is called a _call back_
 
 Every time a function is called
-the current context is stored on top of the stack. 
+the _current context_ is stored on _top_ of the stack. 
 
 When a function returns, it removes the top context from the stack and uses that context to continue execution. 
 
@@ -256,7 +257,7 @@ If you pass the function too little arguments the missing parameters get assigne
 The upside of having too many arguments in the function is that you can call the same function function with different number of arguments for different results. 
 
 ```
-ex:
+ex: multiple arguments
 
 function minus(a, b){
   if (b === undefined) return -a 
@@ -281,7 +282,7 @@ asks the question,
 what happens to local bindings when the function call that created them is not longer active?
 
 Local bindings are created new for every call. 
-Diffeerent calls cant trample on one anothers local bindings 
+Different calls can't trample on one anothers local bindings 
 
 Being able to reference a specific instance of a local binding in an enclosing scope is called **closure**
 A function that references bindings from local scopes around it is called **a** _closure_
@@ -289,10 +290,10 @@ A function that references bindings from local scopes around it is called **a** 
 Using closures frees you from having to worry about lifetimes of bindings and also makes it possible to use function values in creative ways.
 
 ```
-ex:
+ex:  a closure
 
 function multiplier(factor){
-  return number => number * factor 
+  return number => number * factor
 }
 
 let twice = multpilier(2)
@@ -303,11 +304,12 @@ console.log(twice(5)) ==> 10
 
 Think of function values as containing both the code in their body - and - the environment in which they are created. 
 
-In the example above, the function multiplier is called
-  that call creates an environment in which it's _factor_ parameter is bound to 2 
-  The function value it returns is stored in the binding _twice_
-  the bindign _twice_ remembers the environment in which it was created in 
-  so when that binding is called with an argument, it multiplies it's argument by 2 
+In the example above:
+  - the function multiplier is called
+  - that call creates an environment in which it's _factor_ parameter is bound to 2 
+  - The function value it returns is stored in the binding _twice_
+  - the binding _twice_ remembers the environment in which it was created in 
+  - so when that binding is called with an argument, it multiplies it's argument by 2 
   
 ## Recursion 
 
@@ -348,20 +350,20 @@ problem ex: 13 consists of first multiplying by 3 and then adding 5 twice.
 ```
 recursive ex:
 
-function findSolution(target) {
-  function find(current, history){
-    if (current == target) {
-      return history;
-    } else if (current > target){
-      return null;
-    } else {
-      return find( current + 5, `${history} + 5` )|| find( current * 3, `${history} * 3`);
-    }
-  }
-  return find(1, "1");
-}
+1                 function findSolution(target) {
+2 4 6  10  13       function find(current, history){
+    7               if (current == target) {
+                        return history;
+    8  11           } else if (current > target){
+                        return null;
+                       } else {
+ 5  9  12  14           return find( current + 5, `${history} + 5` )|| find( current * 3, `${history} * 3`);
+                      }
+                    }
+3                   return find(1, "1");
+                    }
 
-console.log( findSolution(24) ) ===> (((1 * 3) + 5) * 3)
+                    console.log( findSolution(24) ) ===> (((1 * 3) + 5) * 3)
 
 ```
 
@@ -401,8 +403,15 @@ find(3, "(1 * 3)")
     
     
 The first time _find_ is called, it starts by calling itself to explore the solution that it starts with: (1+5)
-That call will continue to recurse to explore *every* comntinued solution that yields a number less than or equal to that target number
-Since it doesn't find a solution that hits the target, it returrnd null back to the first call. 
-There the || operator causes the call that explores (1 * 3) to happen
-It's first recursive call - through another recursive call hits the target number 
-The innermost call returns a string and each of the || operators in the intermediate calls passes that string along, ultimately returning the solution. 
+
+  - That call will continue to recurse to explore *every* comntinued solution that yields a number less than or equal to that target number
+  - Since it doesn't find a solution that hits the target, it returnd null back to the **first call.** 
+  - There the || operator causes the call that explores (1 * 3) to happen
+  - It's first recursive call - through another recursive call hits the target number 
+  - The innermost call returns a string 
+  - and each of the || operators in the intermediate calls passes that string along
+  - ultimately returning the solution. 
+
+## Growing Functions
+
+Break down a function into a reuseable function for other programs to use and for you not to repeat yourself
