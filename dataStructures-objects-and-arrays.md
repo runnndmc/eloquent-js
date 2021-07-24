@@ -170,5 +170,32 @@ ex:
 const score = {visitors: 1, home: 0}
 score.visitors = 2;
 
-console.log(score) ==> 
+console.log(score) ==> {visitors: 2, home: 0}
+
+score = {visitors: 3, home: 1} ====> ERROR
+```
+
+There is no deep comparison operation build into JS to compare objects by contents. 
+
+#### Squirrel World
+
+``` 
+let journal = []
+function addEntry() {
+      journal.push({events, squirrel})
+ }
+ 
+ ```
+ 
+ In the above example, the object being pushed into journal does not have any values attached to the keys. This is short hand that means, if a property name is not followed by a value, it's value is taken from the binding with the same name. 
+ 
+ A _correlation_ is a measure of dependence between statistical variables. In statistics, you typically have a set of measurements and each variable is measured for every measurement. 
+ 
+ #### Computing Correlation
+ 
+-  We can represent a two by two table in JS by writing a 4 element array ([76, 4, 21, 1])
+- We can also use other represenations such as an array with arrays ([[76, 4], [21,1]]) 
+- Or an object with property namees such as "11" or "01"
+
+
 
