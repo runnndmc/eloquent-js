@@ -29,7 +29,7 @@ ex: Math.max(1, 10)
 In the example, you're accessing the max property of the Math object. The Math ojbect is a collection of mathematics related constants and functions 
 
 Almost all JavaScript values have properties 
-The only JavaScripy values that don't have properties are *null* and *undefined*
+The only JavaScript values that don't have properties are *null* and *undefined*
 
 If you were to try and pass properties onto either null or undeefined you would come back with an error.
 
