@@ -198,4 +198,24 @@ function addEntry() {
 - Or an object with property namees such as "11" or "01"
 
 
+Arrays have an _includes_ method that hecks whether a given akue exists in the array. 
+A common way to loop over an array and pick out each element in turn, you could do a **for of** loop
+```
+ex:
+for (let entry of JOURNAL) {
+      console.log(`${entry.events.length} events.`)
+ }
+ 
+ ```
+
+a for of loop works with arrays, strings and some other data structures
+
+#### More Array Methods
+
+To add and remove items from the beginning of an array you can utilize **shift** and **unshift**
+
+**shift** - removes from the front of the array
+**unshift** - adds to the beginning of the array 
+
+
 
