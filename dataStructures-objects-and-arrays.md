@@ -217,7 +217,7 @@ To add and remove items from the beginning of an array you can utilize **shift**
 **shift** - removes from the front of the array
 **unshift** - adds to the beginning of the array 
 
-### Array Loops
+
 
 
 
