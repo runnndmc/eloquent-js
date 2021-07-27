@@ -217,6 +217,39 @@ To add and remove items from the beginning of an array you can utilize **shift**
 **shift** - removes from the front of the array
 **unshift** - adds to the beginning of the array 
 
+```
+ex:
+
+let toDoList=[];
+function remember(task){
+      toDoList.push(task);
+}
+
+function getTask(task){
+      return toDoList.shift(task)
+}
+
+function rememberUrgently(task){
+      return toDoList.unshift(task);
+}
+
+```
+
+This program would manage the queue of tasks.
+You would add tasks to the end of the queue by calling the remember() function 
+When you're ready todo something you would call getTask() which would also remove the task. 
+If you had to do something right away, you would call rememberUrgently() to add to the front of the queue. 
+
+To search a specific value you could use the **indexOf** method.
+ - this method searches through the array until it finds the matching index. When it does it returns that index value that was requested 
+ - if the value is not found, the indexOf method will return -1 
+
+To search from the end of an array instead of the beginning, you can call **lastIndexOf** 
+
+Both indexOf and lastIndexOf take optional second arguments. These second arguments indicate where to start the search from. 
+
+--- slice. 
+
 
 
 
