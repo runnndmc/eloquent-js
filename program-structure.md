@@ -35,6 +35,7 @@ ex:
 ```
 let ten = 10
 console.log(ten * ten) ==> 100
+console.log(ten) ==> 10
 ```
 
 The = operator on existing bindings disconnects them from their current value and points them to a new value. 
