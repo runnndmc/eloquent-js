@@ -34,7 +34,7 @@ example: 13
 A typcial modern computer has more than 30 billion bits in its volatile **data storage** or working memory.
   Nonvolatile storage (the hard disk) tends to have a magnitude more of bits
   
-**Values* chuncks of data that represent pieces of information.
+**Values** are chunks of data that represent pieces of information.
 
 Though all values are made of bits, they can play different roles. 
 Every value has a _type_ that determines its role.
@@ -50,22 +50,22 @@ Every value has to be stored somewhere. If you want to use a gigantic amount of 
 
 JavaScript uses a fixed number of bits - 64 
 These bits are used to store a single number value. These bits also store negative numbers so one bit indicated the sign of the number.
-Some bits are also used to stope the position of the decimal point. 
+Some bits are also used to stop the position of the decimal point. 
 
 <br></br>
 
 ### Arithmetic
 
-When operators appear together without parentheses, the order in which they are applied is determined bu the _precedence_of the operators. 
+When operators appear together without parentheses, the order in which they are applied is determined bu the _precedence_ of the operators. 
 
 example: / & * have the same precedence 
          _ & + have the same precedence 
          
 When multiple operators with the same precedence appear next to eachother, they are applied left to right.
 
-When in doubt, just add paretheses!
+When in doubt, just add parentheses!
 
-**Modulo** or the % symbol is used to represent the remander operation.
+**Modulo** or the % symbol is used to represent the remainder operation.
 
 example: X % Y is the remainder of dividing X by Y
 
@@ -92,8 +92,8 @@ This can happen only when the string is quoted with backtics (\')
 _escaping_  - Whenever a blackslash (\) is found inside quoted text, it indicates that the character after it has special meaning. 
 
 A quote that is precesed by a backlash will not end the string but be part of it. 
-When an N character occurs after a backslash, it is interpreted as a newline. 
-When a T is after a backslash, it means a tab character
+When an N character occurs after a backslash, it is interpreted as a **newline.**
+When a T is after a backslash, it means a **tab character**
 
 example:
 ```
@@ -132,7 +132,7 @@ such as the operator:  typeof
 example: console.log(typeof 4.5)
 // → number
 
-operators that use two valued are called **binary operators** while those that take one are called **urnary operators**
+operators that use two values are called **binary operators** while those that take one are called **urnary operators**
 
 <br></br>
 
@@ -170,7 +170,7 @@ console.log(NaN == NaN)
 
 <br></br>
 
-##Logical Operators
+## Logical Operators
 
 JavaScript supports three logical operators: _and, or_ and _not_
 
@@ -217,7 +217,7 @@ console.log(null == undefined) ==> true
 console.log(null == 0) ==> false
 ```
 
-When you want to test whether a value has a **real value** instead of nul or undefined you can **compare it to null** with the == or != operator.
+When you want to test whether a value has a **real value** instead of null or undefined you can **compare it to null** with the == or != operator.
 
 ```
 console.log(0 == false) ==> true
@@ -226,7 +226,7 @@ console.log('' == false) ==> true
 
 <br></br>
 
-##Short-circuting of logical operators
+## Short-circuting of logical operators
 
 || - logical operator or, **will return the value to it's left when that can be converted to true** otherwise it will return the value on the right.
 
