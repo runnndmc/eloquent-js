@@ -137,7 +137,7 @@ A _side effect_ is showing a dialog box or writing text to a screen.
 Functions may produce side effets or values. 
 
 In JS anything that produces a value is an _expression_ 
-(_reminder: An **expression** is a fragment of code that produces a value which is written literally.)
+(_reminder: An **expression** is a fragment of code that produces a value which is written literally._)
 
 This means that function calls can be used within larger expressions. 
 
@@ -173,7 +173,7 @@ ex:
 let setNumber = Number(prompt("Pick a number"))
 
 if(!Number.isNaN(setNumber)){
-  console.log("You're number is the square root of" + setNumber * setNumber)
+  console.log("Your number is the square root of" + setNumber * setNumber)
 }
 ```
 The function **Number.isNaN** returns true only if the argument given is not a number. 
@@ -209,9 +209,9 @@ while (num <= 12){
 
 The loop keeps entering the statement as long as the boolean expression produces a value which returns _true_.
 
-In the example above, you can see how the binding : number  keeps track of theprogress of a program. 
+In the example above, you can see how the binding : number  keeps track of the progress of a program. 
 
-In the next example, we're looking to write a program that calculates and shows the value of 2 to the 10th power. In this example, theree needs to be two bindings, one to keep track of the result and one to count how often we've multiplied. The loop tests whether we've reached 10 yet. 
+In the next example, we're looking to write a program that calculates and shows the value of 2 to the 10th power. In this example, there needs to be two bindings, one to keep track of the result and one to count how often we've multiplied. The loop tests whether we've reached 10 yet. 
 
 ```
 let total = 1
@@ -229,7 +229,7 @@ It is a good idea to start a counter at 0.
 **Do Loop**
 
 A do loop is similar to a while loop. 
-This loop always executes it's body at least once. It starts texting whether it should stop only after the first execution.
+This loop always executes it's body at least once. It starts testing whether it should stop only after the first execution.
 
 ex:
 ```
@@ -247,7 +247,7 @@ All strings except "" convert to _true_
 
 **For Loops**
 
-similar to all other loops except, a for loop has all of the statements that are related to the state of the loop are grouped together and included in the statement after _for_
+similar to all other loops, a for loop has all of the statements that are related to the state of the loop are grouped together and included in the statement after _for_
 
 ex:
 ```
@@ -286,7 +286,7 @@ The example above doesn't have an expression that would check for the end of the
 
 The _continue_ keyword is similar to break keyword accept it influences the loop to progress.
 
-When continue is encountered by a loop body, the control flow jumps ut of the body and continues with the loops next iteration. 
+When continue is encountered by a loop body, the control flow jumps out of the body and continues with the loops next iteration. 
 
 
 
@@ -347,7 +347,7 @@ In JS you can define a binding in a few different ways:
 * everythingButTheFirstLetterCaps
 
 
-In a few cases such as the Number function the word is capitalized so as to mark it as a *constructor*
+In a few cases, such as the Number function, the word is capitalized so as to mark it as a *constructor*
 
 
 
@@ -360,5 +360,5 @@ In a few cases such as the Number function the word is capitalized so as to mark
 * Bindings are used to store data under a name - they can track the state in your program
 * The environment is the set of bindings that are defined
 * Functions are special values that encapsulate a piece of a program
-* A function call is an expression d may produce a value
+* A function call is an expression and may produce a value
 
