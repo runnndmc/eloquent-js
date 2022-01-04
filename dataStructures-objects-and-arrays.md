@@ -4,13 +4,16 @@ Objects allow us to group together values, including other objects, to build mor
 
 In order to work with a chunk of data, you would have to find a way to represent it in the machine's memory
 
-An **Array** is a data type that is specifically used for storing sequences of value. Typycally written with square values and seperated by commas.
+
+## Array's
+
+An **Array** is a data type that is specifically used for storing sequences of value. <br>
 
 The notation for getting at the elements inside an array also uses square brackets.
 
 Ex: a pair of square brackets next to an expression with another expression inside of the brackets will look up the element in the left-hand expression that corresponds to the _index_ given by the expression in the brackets.
 
-> an expression is a fragment of code that produces a value that is written literally. 
+> an *expression* is a fragment of code that produces a value that is written literally. 
 
 #### Properties
 
@@ -20,7 +23,7 @@ ex: dogString.length
       |           |
    value       property 
    
-In the exaple, we're accessing the length property of the value in dogString
+In the example, we're accessing the length property of the value in dogString
 
 ex: Math.max(1, 10)
      |    |
